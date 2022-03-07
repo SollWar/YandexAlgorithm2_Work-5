@@ -3,11 +3,11 @@ package maximal
 fun main() {
     val n = readLine()!!.toInt()
     val input = readLine()!!.split(" ")
-    val mas = IntArray(n)
+    val mas = LongArray(n)
     repeat(n) {
-        mas[it] = input[it].toInt()
+        mas[it] = input[it].toLong()
     }
-    val prefMas = IntArray(n + 1)
+    val prefMas = LongArray(n + 1)
     var max = mas[0]
     for (i in 1..n) {
         prefMas[i] = prefMas[i-1] + mas[i-1]
